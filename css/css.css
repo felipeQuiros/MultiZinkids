@@ -198,4 +198,8 @@ html { font-size: 80%; }
 /*--------------------------- css para zinkids.html--------------------------------------*/
 
 
-.zinkids_img_intro { width: 70%; position: absolute; min-width: 400px;}
+.zinkids_img_intro { width: 70%; position: absolute; min-width: 400px; margin-top: 2%;}
+#zinkids_contenedor_texto_ventajas{ width: 43.75%; min-width: 560px; margin-top: 2%;}
+#zinkids_texto_ventajas1{ width:112px; height: 192px; background-image: url(../imgs/zinkids_fondocompleto_1.png); background-repeat: no-repeat;}
+#zinkids_texto_ventajas1{ width:auto; height: 192px; background-image: url(../imgs/zinkids_fondocompleto_2.png);}
+#zinkids_texto_ventajas1{ width:23px; height: 192px; background-image: url(../imgs/zinkids_fondocompleto_3.png); background-repeat: no-repeat;}
