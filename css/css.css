@@ -27,10 +27,15 @@ a:active {color:#ff0000;text-decoration:none;}  /* selected link */
 }
 /* Small screens (default) */
 html { font-size: 80%; }
+
+@media (max-width: 40rem){
+	.column.menu_secundario p {line-height: 25px;}
+}
  
 /* Medium screens (640px) */
 @media (min-width: 40rem) { 
-  html { font-size: 92%; } 
+	html { font-size: 92%; }
+	
 }
  
 /* Large screens (1024px) */
@@ -55,12 +60,12 @@ html { font-size: 80%; }
 .column.menu { width: 60.95%; margin-top: 17px; float: right; max-width:445px; min-width: 445px; }
 .column.texto_intro { width: 50%; margin-top: 100px; max-width:775px; height:500px; text-align:center; overflow-x: hidden; float: left;}
 .column.texto_intro_flechas { width: 24.95%; margin-top: 200px; height:50%;}
-.column.logo { width: 16.95%; cursor: pointer;}
+.column.logo { width: auto; cursor: pointer;}
 .column.flow-opposite { float: right; }
 .boton_menu_sec_1{width: 100%; background-image: url(../imgs/menu_secundario_fondo1.png); background-repeat:no-repeat; height: 31px;}
 .boton_menu_sec_2{width: 100%; background-image: url(../imgs/menu_secundario_fondo2.png); background-repeat:no-repeat; height: 31px;}
 .column.menu_secundario { width: 362px; padding-top: 20px;}
-.column.menu_secundario p {margin: 0; padding: 3px; padding-left: 45px;}
+.column.menu_secundario p {margin: 0; padding: 3px; padding-left: 45px;} 
 .column.contenedor_texto_seccion2{margin: 0; width: 55%; max-width: 680px;}
 .column.contenedor_texto_seccion2 img{max-width: 100%;}
 .seccion2_contenido{background-image: url(../imgs/seccion2_fondo_contenido1.png); background-position: top left; background-size: 100% auto;}
@@ -76,6 +81,7 @@ html { font-size: 80%; }
   background-size: 100% auto;
   background-position: center top;
   background-attachment: fixed;
+  z-index: -10;
 }
 
 #menu_principal{
@@ -110,8 +116,8 @@ html { font-size: 80%; }
 
 #contenido{
 	height: 90%;
- text-align:center;
- padding-top: 2%;
+	text-align:center;
+	padding-top: 2%;
 }
 
 .contenedor_informacion{
@@ -142,10 +148,51 @@ html { font-size: 80%; }
 
 @font-face
 {
-font-family: NeoSans;
-src: url(../fonts/NeoSansIntel.ttf);
+	font-family: NeoSans;
+	src: url(../fonts/NeoSansIntel.ttf);
 }
+
 /*--------------------------- css para zinc.html--------------------------------------*/
+#zinc_intro{
+
+}
+
+#zinc_intro_absolute{
+	position: absolute;
+	left: 0;
+	top: 320px;
+	background-image: url(../imgs/gradientbg_zinc.png);
+	background-repeat: no-repeat;
+	height: 88px;
+	min-width: 480px;
+}
+
+#zinc_intro_absolute p{
+	font-size: 11pt;
+	margin-left: 25px;
+	font-weight: lighter;
+}
+
+#zinc_intro img{
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	height: 92.6%;
+	z-index: 0;
+}
+
+@media (max-width: 40rem){
+	#zinc_intro_absolute{
+		position: absolute;
+		left: 0;
+		top: 380px;
+	}
+}
+
+#zinc_nivelGastro{
+
+	display: none;
+}
 
 
 /*--------------------------- css para zinkids.html--------------------------------------*/
