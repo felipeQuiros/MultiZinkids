@@ -57,8 +57,8 @@ html { font-size: 80%; }
 .column.texto_intro_flechas { width: 24.95%; margin-top: 200px; height:50%;}
 .column.logo { width: 16.95%; cursor: pointer;}
 .column.flow-opposite { float: right; }
-.boton_menu_sec_1{width: 100%; background-image: url(../imgs/menu_secundario_fondo1.png); background-repeat:no-repeat;}
-.boton_menu_sec_2{width: 100%; background-image: url(../imgs/menu_secundario_fondo2.png); background-repeat:no-repeat;}
+.boton_menu_sec_1{width: 100%; background-image: url(../imgs/menu_secundario_fondo1.png); background-repeat:no-repeat; height: 31px;}
+.boton_menu_sec_2{width: 100%; background-image: url(../imgs/menu_secundario_fondo2.png); background-repeat:no-repeat; height: 31px;}
 .column.menu_secundario { width: 362px; padding-top: 20px;}
 .column.menu_secundario p {margin: 0; padding: 3px; padding-left: 45px;}
 .column.contenedor_texto_seccion2{margin: 0; width: 55%; max-width: 680px;}
@@ -145,3 +145,4 @@ html { font-size: 80%; }
 font-family: NeoSans;
 src: url(../fonts/NeoSansIntel.ttf);
 }
+/*--------------------------- css para zinkids.html--------------------------------------*/
