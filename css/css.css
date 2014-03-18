@@ -149,5 +149,6 @@ src: url(../fonts/NeoSansIntel.ttf);
 
 
 /*--------------------------- css para zinkids.html--------------------------------------*/
-/*FUCK*/
 
+
+.zinkids_img_intro { width: 70%; position: absolute; min-width: 400px;}
