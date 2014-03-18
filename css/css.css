@@ -26,16 +26,16 @@ a:active {color:#ff0000;text-decoration:none;}  /* selected link */
 	color: #023e8f;
 }
 /* Small screens (default) */
-html { font-size: 100%; }
+html { font-size: 80%; }
  
 /* Medium screens (640px) */
 @media (min-width: 40rem) { 
-  html { font-size: 112%; } 
+  html { font-size: 92%; } 
 }
  
 /* Large screens (1024px) */
 @media (min-width: 64rem) { 
-  html { font-size: 120%; }
+  html { font-size: 100%; }
 }
   .contenedor_texto_intro img{
 	  max-width:100%;
