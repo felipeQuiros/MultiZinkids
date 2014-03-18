@@ -111,6 +111,7 @@ html { font-size: 80%; }
 #contenido{
 	height: 90%;
  text-align:center;
+ padding-top: 2%;
 }
 
 .contenedor_informacion{
