@@ -64,9 +64,10 @@ html { font-size: 80%; }
 .column.flow-opposite { float: right; }
 .boton_menu_sec_1{width: 100%; background-image: url(../imgs/menu_secundario_fondo1.png); background-repeat:no-repeat; height: 31px;}
 .boton_menu_sec_2{width: 100%; background-image: url(../imgs/menu_secundario_fondo2.png); background-repeat:no-repeat; height: 31px;}
-.column.menu_secundario { width: 362px; padding-top: 20px;}
+.column.menu_secundario { position: absolute;width: 362px; padding-top: 20px; z-index: 100;}
 .column.menu_secundario p {margin: 0; padding: 3px; padding-left: 45px;} 
-.column.contenedor_texto_seccion2{margin: 0; width: 55%; max-width: 680px;}
+.column.contenedor_texto_seccion2{position: absolute; margin: 0; width: 66%; margin-left: 31%; height:800px; overflow: hidden;}
+.contenedor_grande_texto_seccion2{margin: 0; width: 300%; height: 800px;}
 .column.contenedor_texto_seccion2 img{max-width: 100%;}
 .seccion2_contenido{background-image: url(../imgs/seccion2_fondo_contenido1.png); background-position: top left; background-size: 100% auto;}
 .seccion2_contenido li{padding-top: 1%; padding-bottom: 1%;}
@@ -198,4 +199,4 @@ html { font-size: 80%; }
 /*--------------------------- css para zinkids.html--------------------------------------*/
 
 
-.zinkids_img_intro { width: 70%; position: absolute; min-width: 400px;}
+.zinkids_img_intro { width: 33%; min-width: 100px; float: left;}
