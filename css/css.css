@@ -73,13 +73,13 @@ html { font-size: 80%; }
 .contenedor_grande_texto_antecedentes{margin: 0;width: 500%; height: 100%;}
 .antecedentes_imagenes { margin:0; padding: 0;width: 20%; min-width: 100px; max-width: 1920px; float: left;}
 .antecedentes_imagenes img{ max-width: 100%;}
-.zinkids_imagenes { margin:0; padding: 0;width: 9%; min-width: 100px; max-width: 1920px; float: left;}
+.zinkids_imagenes { margin:0; padding: 0;width: 11%; min-width: 100px; max-width: 1920px; float: left;}
 .zinkids_imagenes img{ max-width: 100%;}
 #antecedentes_flecha_atras{ position: absolute; left: 0; margin-top: 16%; padding-left: 20px;}
 #antecedentes_flecha_adelante{ position: absolute; right: 0; margin-top: 16%; padding-right: 20px; } 
 .navegacion{cursor:pointer;}
 #p_0{color:#F00;}
-.column.contenedor_texto_zinkids{position: absolute; margin: 0; width: 100%;height:100%; overflow: hidden;}
+.column.contenedor_texto_zinkids{position: absolute; margin: 0; width: 100%;height:100%;}
 .contenedor_grande_texto_zinkids{margin: 0;width: 900%; height: 100%;}
 .container {
   margin: 0 auto;
