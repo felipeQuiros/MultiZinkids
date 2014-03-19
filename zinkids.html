@@ -9,7 +9,7 @@
 <script src="js/jquery.js"></script>
 <script src="js/js.js"></script>
 <script src="js/jquery.easing.js"></script>
-<script src="js/scrollto.js"></script>
+<script src="js/imagemaps.js"></script>
 <title>Zinkids</title>
 </head>
 
@@ -21,7 +21,7 @@
     	</div>
     	<div class="column menu">
     		<div id="mp_btn1"><p class="mp_btn"><a href="index.html">Introducci&oacute;n</a></p></div>
-    		<div id="mp_btn2"><p class="mp_btn"><a href="zinc.html">El Zinc</a></p></div>
+    		<div id="mp_btn2"><p class="mp_btn"><a href="zinc_2.html">El Zinc</a></p></div>
     		<div id="mp_btn3"><p class="mp_btn"><a href="zinkids.html">Zinkids</a></p></div>
     	</div>
     </div>
@@ -33,24 +33,45 @@
   			<div class="btn_menu boton_menu_sec_1"><p class="navegacion"  id="p_2">Mecanismo de acci&oacute;n</p></div>
   			<div class="btn_menu boton_menu_sec_2"><p class="navegacion"  id="p_3">Usos</p></div>
   			<div class="btn_menu boton_menu_sec_1"><p class="navegacion"  id="p_4">Dosificaci&oacute;n</p></div>
-  			<div class="btn_menu boton_menu_sec_2"><p class="navegacion"  id="p_5">Seguridad</p></div>    
+  			<div class="btn_menu boton_menu_sec_2"><p class="navegacion"  id="p_5">Seguridad</p></div> 
+  			<div class="btn_menu boton_menu_sec_1"><p class="navegacion"  id="p_6">Dosificaci&oacute;n</p></div>
+  			<div class="btn_menu boton_menu_sec_2"><p class="navegacion"  id="p_7">Seguridad</p></div>    
+  			<div class="btn_menu boton_menu_sec_1"><p class="navegacion"  id="p_8">Dosificaci&oacute;n</p></div>
   		</div>  
   		<div class="column contenedor_texto_seccion2">
         <div class="contenedor_grande_texto_seccion2">
             <div class="zinkids_img_intro">
-            	<img src="imgs/imgs_prueba/zinkids_1.png"/>           	
+            	<img src="imgs/zinkids/zinkids_1.png"/>           	
             </div>
             <div class="zinkids_img_intro">
-            	<img src="imgs/imgs_prueba/zinkids_2.png"/>           	
+            	<img src="imgs/zinkids/zinkids_2.png"/>           	
             </div>
             <div class="zinkids_img_intro">
-            	<img src="imgs/imgs_prueba/zinkids_3.png"/>           	
+            	<img src="imgs/zinkids/zinkids_3a.png" usemap="#Map" border="0"/>
+                <map name="Map" id="Map">
+                  <area shape="rect" coords="125,160,287,187" href="#" id="a" />
+                  <area shape="rect" coords="316,159,484,185" href="#" id="b"/>
+                </map>  
+            	<img src="imgs/zinkids/zinkids_3aa.png" id="imagen_a"/>  
+            	<img src="imgs/zinkids/zinkids_3ab.png" id="imagen_b"/>           	
             </div>
             <div class="zinkids_img_intro">
-            	<img src="imgs/imgs_prueba/zinkids_4.png"/>           	
+            	<img src="imgs/zinkids/zinkids_4.png"/>           	
             </div>
             <div class="zinkids_img_intro">
-            	<img src="imgs/imgs_prueba/zinkids_5.png"/>           	
+            	<img src="imgs/zinkids/zinkids_5.png"/>           	
+            </div>
+            <div class="zinkids_img_intro">
+            	<img src="imgs/zinkids/zinkids_6.png"/>           	
+            </div>
+            <div class="zinkids_img_intro">
+            	<img src="imgs/zinkids/zinkids_7.png"/>           	
+            </div>
+            <div class="zinkids_img_intro">
+            	<img src="imgs/zinkids/zinkids_8.png"/>           	
+            </div>
+            <div class="zinkids_img_intro">
+            	<img src="imgs/zinkids/zinkids_9.png"/>           	
             </div>
             </div>
   		</div>  
@@ -62,6 +83,7 @@
 
 <script>
 $( document ).ready(function() {
+    $('img[usemap]').rwdImageMaps();
 	var ancho_contenedor = ($(".zinkids_img_intro").width())+'px'; // OJO
 	$('.contenedor_grande_texto_seccion2').css("width", ancho_contenedor + "px");  // se puede comentar OJO
 	var lugar;
@@ -88,7 +110,18 @@ $(window).resize(function(){
 				duration:0,
         		easing: 'easeInOutExpo'
 		});	
+		
 });	
+
+$( "#a" ).click(function() {
+	$("#imagen_a").show();
+	$("#imagen_b").hide();
+});
+
+$( "#b" ).click(function() {
+	$("#imagen_b").show();
+	$("#imagen_a").hide();
+});
 
 });
 
