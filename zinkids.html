@@ -38,13 +38,19 @@
   		<div class="column contenedor_texto_seccion2">
         <div class="contenedor_grande_texto_seccion2">
             <div class="zinkids_img_intro">
-            	<img src="imgs/zinkids_2.png"/>           	
+            	<img src="imgs/imgs_prueba/zinkids_1.png"/>           	
             </div>
             <div class="zinkids_img_intro">
-            	<img src="imgs/zinkids_1.png"/>           	
+            	<img src="imgs/imgs_prueba/zinkids_2.png"/>           	
             </div>
             <div class="zinkids_img_intro">
-            	<img src="imgs/bebemutante.png"/>           	
+            	<img src="imgs/imgs_prueba/zinkids_3.png"/>           	
+            </div>
+            <div class="zinkids_img_intro">
+            	<img src="imgs/imgs_prueba/zinkids_4.png"/>           	
+            </div>
+            <div class="zinkids_img_intro">
+            	<img src="imgs/imgs_prueba/zinkids_5.png"/>           	
             </div>
             </div>
   		</div>  
@@ -55,21 +61,15 @@
 </html>
 
 <script>
-
-
 $( document ).ready(function() {
-	var anterior=1;
+	var ancho_contenedor = ($(".zinkids_img_intro").width())+'px'; // OJO
+	$('.contenedor_grande_texto_seccion2').css("width", ancho_contenedor + "px");  // se puede comentar OJO
 	var lugar;
-	
 	var distancia=$(".zinkids_img_intro").width();
-	var secciones_intro=3
-	$('#atras_intro').fadeOut(0);
-	
-	
+
 $( ".navegacion" ).click(function() {
 		lugar = this.id.split("_").pop();
 		ir_a = (lugar*distancia*-1)+'px';
-		alert(ir_a);
 		$('.contenedor_grande_texto_seccion2').animate({'marginLeft': (ir_a)}, 
 			{
 				duration:1000,
@@ -79,6 +79,8 @@ $( ".navegacion" ).click(function() {
 });
 
 $(window).resize(function(){
+	ancho_contenedor = ($(".zinkids_img_intro").width())+'px'; // OJO
+	$('.contenedor_grande_texto_seccion2').css("width", ancho_contenedor + "px");  // se puede comentar OJO
 	distancia=$(".zinkids_img_intro").width();
 		ir_a = (lugar*distancia*-1)+'px';
 		$('.contenedor_grande_texto_seccion2').animate({'marginLeft': (ir_a)}, 
