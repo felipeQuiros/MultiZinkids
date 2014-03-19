@@ -30,20 +30,20 @@
   		<div class="column menu_secundario">
   			<div class="btn_menu boton_menu_sec_1"><p class="navegacion" id="p_0">Ventajas de su f&oacute;rmula</p></div>
   			<div class="btn_menu boton_menu_sec_2"><p class="navegacion"  id="p_1">Farmacocin&eacute;tica</p></div>
-  			<div class="btn_menu boton_menu_sec_1"><p class="navegacion"  id="p_3">Mecanismo de acci&oacute;n</p></div>
-  			<div class="btn_menu boton_menu_sec_2"><p class="navegacion"  id="p_4">Usos</p></div>
-  			<div class="btn_menu boton_menu_sec_1"><p class="navegacion"  id="p_5">Dosificaci&oacute;n</p></div>
-  			<div class="btn_menu boton_menu_sec_2"><p class="navegacion"  id="p_6">Seguridad</p></div>    
+  			<div class="btn_menu boton_menu_sec_1"><p class="navegacion"  id="p_2">Mecanismo de acci&oacute;n</p></div>
+  			<div class="btn_menu boton_menu_sec_2"><p class="navegacion"  id="p_3">Usos</p></div>
+  			<div class="btn_menu boton_menu_sec_1"><p class="navegacion"  id="p_4">Dosificaci&oacute;n</p></div>
+  			<div class="btn_menu boton_menu_sec_2"><p class="navegacion"  id="p_5">Seguridad</p></div>    
   		</div>  
   		<div class="column contenedor_texto_seccion2">
         <div class="contenedor_grande_texto_seccion2">
-            <div class="zinkids_img_intro" id="p1">
+            <div class="zinkids_img_intro">
             	<img src="imgs/zinkids_2.png"/>           	
             </div>
-            <div class="zinkids_img_intro" id="p2">
+            <div class="zinkids_img_intro">
             	<img src="imgs/zinkids_2.png"/>           	
             </div>
-            <div class="zinkids_img_intro" id="p3">
+            <div class="zinkids_img_intro">
             	<img src="imgs/zinkids_2.png"/>           	
             </div>
             </div>
@@ -61,17 +61,9 @@ $( document ).ready(function() {
 	var anterior=1;
 	var lugar;
 	
-	var distancia=$(window).width();
+	var distancia=$(".zinkids_img_intro").width();
 	var secciones_intro=3
 	$('#atras_intro').fadeOut(0);
-	
-    /*var ids = [];
-    $(".contenedor_texto_intro").children().each(function(){
-		var tabId = this.id.split("_").pop(); // => "Tabs1"
-		if(tabId!=1){
-			$(this).fadeOut();
-		}
-    });*/
 	
 	
 $( ".navegacion" ).click(function() {
@@ -87,15 +79,15 @@ $( ".navegacion" ).click(function() {
 });
 
 $(window).resize(function(){
-		
-	reset_distance = $('.contenedor_informacion').parent().width();
-	
-	$('.contenedor_texto_intro').animate({'marginLeft': ((reset_distance/3)*estado_intro)*-1}, 	
-		{
-			duration:0,
-        	easing: 'easeInOutExpo'
+	distancia=$(".zinkids_img_intro").width();
+		ir_a = (lugar*distancia*-1)+'px';
+		$('.contenedor_grande_texto_seccion2').animate({'marginLeft': (ir_a)}, 
+			{
+				duration:0,
+        		easing: 'easeInOutExpo'
 		});	
 });	
+
 });
 
 </script>
