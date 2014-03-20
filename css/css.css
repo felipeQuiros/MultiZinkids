@@ -99,27 +99,30 @@ html { font-size: 80%; }
 }
 
 #mp_btn1{
-	background-image: url(../imgs/fondo_btn1.png);
+	background-image: url(../imgs/fondo_btn1_v2.png);
+	background-repeat: no-repeat;
 	height: 40px;
-	width: 295px;
+	width: 330px;
 	float: left;
 	margin-right:5px;
 	 cursor: pointer;
 }
 
 #mp_btn2{
-	background-image: url(../imgs/fondo_btn2.png);
+	background-image: url(../imgs/fondo_btn2_v2.png);
+	background-repeat: no-repeat;
 	height: 40px;
-	width: 200px;
+	width: 212px;
 	float: left;
 	margin-right:5px;
 	 cursor: pointer;
 }
 
 #mp_btn3{
-	background-image: url(../imgs/fondo_btn3.png);
+	background-image: url(../imgs/fondo_btn3_v2.png);
+	background-repeat: no-repeat;
 	height: 40px;
-	width: 119px;
+	width: 110px;
 	float: left;
 	 cursor: pointer;
 }
