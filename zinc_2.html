@@ -86,13 +86,14 @@ $(window).resize(function(){
 	$('.contenedor_grande_texto_antecedentes').css("width", ancho_contenedor + "px");  // se puede comentar OJO
 	distancia=$(".antecedentes_imagenes").width();
 		ir_a = (lugar*distancia*-1)+'px';
-		$('.contenedor_grande_texto_seccion2').animate({'marginLeft': (ir_a)}, 
+		$('.contenedor_grande_texto_antecedentes').animate({'marginLeft': (ir_a)}, 
 			{
 				duration:0,
         		easing: 'easeInOutExpo'
 		});	
 		
-});	
+});		
+		
 
 });
 
