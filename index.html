@@ -15,7 +15,7 @@
 
 <body id="uno">
 <div class="container">
-  	<div class="row clearfix" id="menu_principal">
+  	<div class="row clearfix" id="menu_principal_2">
     	<div class="column logo">
     		<img src="imgs/logo_principal.png"/>
     	</div>
@@ -30,7 +30,7 @@
   		<div class="column contenedor_texto_antecedentes">
         <div class="contenedor_grande_texto_antecedentes">
             <div class="antecedentes_imagenes">
-            <video src="imgs/Video_Zinkids_V4.mp4" autoplay="autoplay" width="1920">
+            <video src="imgs/Video_Zinkids_V4.mp4" autoplay="autoplay" width="1920" style="margin-top:0px;">
             </video>
             	<!--<img src="imgs/antecedentes_v2/Antecedentes_0.png" width="1920"/>-->           	
             </div>
@@ -132,6 +132,10 @@ $(window).resize(function(){
 			duration:0,
         	easing: 'easeInOutExpo'
 		});	
+});
+$("video").bind("ended", function() {
+   $("#menu_principal_2").slideDown(1000);
+   $("video").animate({marginTop: "-30px"}, 800, 'easeInOutExpo');
 });
 });
 

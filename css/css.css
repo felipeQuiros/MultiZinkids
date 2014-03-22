@@ -129,6 +129,10 @@ img.map{
 #menu_principal{
 	background-image: url(../imgs/fondo_menu.jpg);
 }
+#menu_principal_2{
+	background-image: url(../imgs/fondo_menu.jpg);
+	display: none;
+}
 
 #mp_btn1{
 	background-image: url(../imgs/fondo_btn1_v2.png);
