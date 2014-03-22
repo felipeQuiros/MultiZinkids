@@ -33,45 +33,57 @@
   			<div class="btn_menu boton_menu_sec_1"><p class="navegacion"  id="p_2">Acci&oacute;n en diarrea</p></div>
   			<div class="btn_menu boton_menu_sec_2"><p class="navegacion"  id="p_3">Acci&oacute;n en el sistema inmune</p></div>
   			<div class="btn_menu boton_menu_sec_1"><p class="navegacion"  id="p_4">Ventajas de su f&oacute;rmula</p></div>
-  			<div class="btn_menu boton_menu_sec_2"><p class="navegacion"  id="p_5">Farmacocin&eacute;tica</p></div>
-  			<div class="btn_menu boton_menu_sec_1"><p class="navegacion"  id="p_6">Usos</p></div>
-  			<div class="btn_menu boton_menu_sec_2"><p class="navegacion"  id="p_7">Dosificaci&oacute;n</p></div>
-  			<div class="btn_menu boton_menu_sec_1"><p class="navegacion"  id="p_8">Seguridad</p></div>
+  			<div class="btn_menu boton_menu_sec_2"><p class="navegacion"  id="p_5">Usos</p></div>
+  			<div class="btn_menu boton_menu_sec_1"><p class="navegacion"  id="p_6">Dosificaci&oacute;n</p></div>
+  			<div class="btn_menu boton_menu_sec_2"><p class="navegacion"  id="p_7">Seguridad</p></div>
   		</div>  
+        <div id="el_gif">
+        <img src="imgs/pelos-2.gif"/>
+        </div>   
   		<div class="column contenedor_texto_zinkids">
         <div class="contenedor_grande_texto_zinkids">
             <div class="zinkids_imagenes">
-            	<img src="imgs/zinkids_v2/zinkids_1.png" width="1920"/>           	
+            	<img src="imgs/zinkidsv3/zinkids_1.png" width="1920"/>           	
             </div>
             <div class="zinkids_imagenes">
-            	<img src="imgs/zinkids_v2/zinkids_2.png" width="1920"/>           	
+           	<img src="imgs/zinkidsv3/zinkids_2.png" width="1920" border="0"/>
+          </div>
+            <div class="zinkids_imagenes">
+            	<img src="imgs/zinkidsv3/zinkids_3a.png" usemap="#Map" border="0" id="mapa" width="1920" height="1080"  hidefocus="true" />
+                <map name="Map" id="Map">
+                  <area shape="rect" coords="788,344,1034,385" href="#" id="a_1"/>
+                  <area shape="rect" coords="1072,341,1320,383" href="#" id="a_2"/>
+                </map>        	
+          </div>
+
+<script>
+(function($){
+  /* inside wrapper can use "$" */
+   jQuery(document).ready(function(e) {
+       jQuery('img[usemap]').rwdImageMaps();
+    });
+
+})(jQuery);
+	</script>
+            <div class="zinkids_imagenes">
+            	<img src="imgs/zinkidsv3/zinkids_4.png" width="1920"/>           	
             </div>
             <div class="zinkids_imagenes">
-           	<img src="imgs/zinkids_v2/zinkids_2a.png" width="1920" usemap="#Map" border="0"/>
-            <map name="Map" id="Map">
-              <area shape="rect" coords="789,282,1029,325" href="#" />
-              <area shape="rect" coords="1071,284,1320,321" href="#" />
-            </map>
+            	<img src="imgs/zinkidsv3/zinkids_5.png" width="1920"/>           	
             </div>
             <div class="zinkids_imagenes">
-            	<img src="imgs/zinkids_v2/zinkids_3.png" width="1920"/>           	
+            	<img src="imgs/zinkidsv3/zinkids_6.png" width="1920"/>           	
             </div>
             <div class="zinkids_imagenes">
-            	<img src="imgs/zinkids_v2/zinkids_4.png" width="1920"/>           	
+            	<img src="imgs/zinkidsv3/zinkids_7.png" id ="dosificacion" width="1920"/>           	
             </div>
             <div class="zinkids_imagenes">
-            	<img src="imgs/zinkids_v2/zinkids_5.png" width="1920"/>           	
+            	<img src="imgs/zinkidsv3/zinkids_8.png" width="1920" style="margin-left:30px;"/>           	
             </div>
             <div class="zinkids_imagenes">
-            	<img src="imgs/zinkids_v2/zinkids_6.png" width="1920"/>           	
+            	<img src="imgs/zinkidsv3/zinkids_9.png" width="1920"/>           	
             </div>
-            <div class="zinkids_imagenes">
-            	<img src="imgs/zinkids_v2/zinkids_7.png" width="1920" style="margin-left:30px;"/>           	
-            </div>
-            <div class="zinkids_imagenes">
-            	<img src="imgs/zinkids_v2/zinkids_8.png" width="1920"/>           	
-            </div>
-            </div>
+          </div>
   		</div>  
   	</div>
   </div>
@@ -81,11 +93,11 @@
 
 <script>
 $( document ).ready(function() {
-    $('img[usemap]').rwdImageMaps();
 	var ancho_contenedor = ($(".zinkids_imagenes").width())+'px'; // OJO
 	$('.contenedor_grande_texto_zinkids').css("width", ancho_contenedor + "px");  // se puede comentar OJO
 	var lugar;
 	var distancia=$(".zinkids_imagenes").width();
+	var estado= 1;	
 
 $( ".navegacion" ).click(function() {
 	$( ".navegacion" ).each(function(index, element) {
@@ -94,11 +106,30 @@ $( ".navegacion" ).click(function() {
 	$(this).css("color", "#F00");
 		lugar = this.id.split("_").pop();
 		ir_a = (lugar*distancia*-1)+'px';
+		if(lugar!=2){
+			$("#el_gif").hide();
+		}
+		if(lugar==2&&estado==2){
+			$("#el_gif").show(500);		
+		}
 		$('.contenedor_grande_texto_zinkids').animate({'marginLeft': (ir_a)}, 
 			{
 				duration:1000,
         		easing: 'easeInOutExpo'
 		});	
+	
+});
+
+$( "#a_1" ).click(function() {
+            $("#mapa").attr("src","imgs/zinkidsv3/zinkids_3a.png");
+			$("#el_gif").hide();
+			estado=1;
+});
+
+$( "#a_2" ).click(function() {
+            $("#mapa").attr("src","imgs/zinkidsv3/zinkids_3b.png");
+			$("#el_gif").show();
+			estado=2;
 	
 });
 
