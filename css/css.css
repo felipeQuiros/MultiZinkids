@@ -81,6 +81,10 @@ img.map{
 	width:29%;
 	display: none;
 }
+
+#el_gif img{
+	max-width: 100%;
+}
   
 .column.full { width: 100%; }
 .column.two-thirds { width: 66.7%; }
